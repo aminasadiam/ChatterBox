@@ -15,7 +15,7 @@ var (
 func RunApi(endpoint string, db datalayer.SQLhandler) error {
 	r := mux.NewRouter()
 
-	log.Fatalln("Started at : %s", endpoint)
+	log.Fatalf("Started at : %s\n", endpoint)
 	return http.ListenAndServe(endpoint, r)
 }
 
